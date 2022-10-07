@@ -7,11 +7,19 @@
 
     //ENTRADA
     let listaDeNomes = ["João Pedro", "Gabriel José", "Ulisses Joao", "Pedro Henrique", "João da Silva", "João Henrique", "Alisson João"];
+    let joaos = [];
 
 
     //PROCESSAMENTO
+    for (nome of listaDeNomes)
+        if (nome.toUpperCase().replace("Ã", "A").search("JOAO") >= 0) {
+            joaos.push(nome)
+        }
 
+    document.write(` Resultados da busca:<li>${joaos.join("</li><li>")}`);
 
     //SAÍDA
+
+
 
 </script>
